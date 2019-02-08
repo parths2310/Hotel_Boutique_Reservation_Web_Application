@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body background="http://wallpaper-gallery.net/images/brown-wallpaper-hd/brown-wallpaper-hd-10.jpg">
+
+<head>
+  <title>Lake Palace, Udaipur - The Best Luxury 5 Star Hotel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    border-style: solid;
+    border-width: thin;
+    border-color: #FFFFFF;
+    transition: max-height 0.2s ease-out;
+}
+</style>
+  <script type="text/javascript">
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a style="color:black;" class="navbar-brand" href="#">Royal Palace- Palace on the lake</a>
+   
+    </div>
+    <ul class="nav navbar-nav">
+       <br></br>
+      <li><a style="color:black;" href="http://localhost/hotelnew.html">Home</a></li>
+      <li><a style="color:black;"href="./AddCustomer.html">Add Customer</a></li>
+      <li class="active"><a style="color:black;" href="./EventReservation.html">Event Reservation</a></li>
+      <li><a style="color:black;" href="./ViewCustomer.html">Room Availability</a></li>
+      <li><a style="color:black;" href="./AddRoom.html">Add Rooms</a></li>
+      <li><a style="color:black;" href="./ContactUs.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3 style="color:White;">Event Reservation</h3>
+  <p></p>
+<form action="./EventReservation.py">
+  <div class="form-group">
+    <label for="cname" style="color:White;">Customer Name:</label>
+    <input type="text" class="form-control" id="cname" name="cname" required>
+  </div>
+  <div class="form-group">
+    <label for="pno" style="color:White;">Primary No:</label>
+    <input type="number" class="form-control" id="pno" name="pno">
+  </div>
+  <div class="form-group">
+    <label for="sdate" style="color:White;">Start Date:</label>
+    <input type="date" class="form-control" id="sdate" name="sdate">
+  </div>
+  <div class="form-group">
+    <label for="edate" style="color:White;">End Date:</label>
+    <input type="date" class="form-control" id="edate" name="edate">
+  </div>
+  <div class="form-group">
+    <label for="eType" style="color:White;">Select Event Type</label>
+    <select class="form-control" id="eType" name="eType">
+      <option></option>
+      <option>Conference</option>
+      <option>Wedding</option>
+      <option>Awards</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="epno" style="color:White;">Accompanying guest:</label>
+    <input type="number" class="form-control" id="epno" name="epno">
+  </div>
+  </div>
+  </div>
+<button class="accordion">Payment Details</button>
+<div class="panel">
+  <div class="form-group">
+    <label for="pType" style="color:White;">Select Payment Mode</label>
+    <select class="form-control" id="pType" name="pType">
+      <option>Cash</option>
+      <option>Card</option>
+      <option>Net</option>
+
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="totalPayment" style="color:White;">Total Amount:</label>
+    <input type="number" class="form-control" id="totalPayment" name="totalPayment" required>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+</body>
+</html>
